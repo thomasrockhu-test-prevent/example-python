@@ -32,7 +32,10 @@ def test_divide():
     assert Calculator.divide(-4, 2.0) == -2.0
     # assert Calculator.divide(2.0, 0.0) == 'Cannot divide by 0'
 
-def test_fail():
+def test_fail1():
+    assert True == False
+
+def test_fail2():
     assert True == False
 
 def test_flaky():

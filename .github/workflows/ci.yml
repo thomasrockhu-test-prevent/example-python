@@ -15,6 +15,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run tests and collect coverage
-        run: pytest app --junitxml=junit.xml -o junit_family=legacy
+        run: pytest calculator --junitxml=junit.xml -o junit_family=legacy
       - name: Upload TA to Sentry
+        if: ${{ !cancelled() }}
         uses: getsentry/prevent-action@v0
